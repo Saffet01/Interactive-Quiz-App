@@ -77,22 +77,33 @@ option.forEach( option => {
             return;
         }
 
-        acceptingAnswers = true;
+        acceptingAnswers = false;
 
         const selectedOption = choose.target;
-        //console.log(selectedOption);
+        console.log(selectedOption);
         const selectedAnswer = selectedOption.dataset["number"];
 
-        console.log(selectedAnswer, currentQuestion.answer);
+        //console.log(selectedAnswer, currentQuestion.answer);
 
-        if(selectedAnswer == currentQuestion.acceptingAnswers){
-            
+        const addClass = selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
+
+        if(addClass === "correct"){
+            incrementScore(correctAnswerBonus);
         }
 
-        getNewQuestion();
+        selectedOption.classList.add(addClass);
 
-    })
+        setTimeout( () => {
+            selectedOption.classList.remove(addClass);
+            getNewQuestion();
+        }, 1000);
+
+    });
 
 });
+
+incrementScore = num => {
+    score += num;
+}
 
 startGame();

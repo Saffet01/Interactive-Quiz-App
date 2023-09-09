@@ -31,3 +31,11 @@ h3{
     box-shadow: 4px 4px 14px -4px rgba(0, 0, 0, 0.76);
     transform: scale(1.05);
 }
+
+.correct{
+    background-color: rgb(99, 183, 155);
+}
+
+.incorrect{
+    background-color: rgb(192, 96, 96);
+}

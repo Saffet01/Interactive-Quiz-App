@@ -17,6 +17,7 @@ body {
     align-items: center;
     max-width: 70rem;
     min-width: 30rem;
+    background-color: rgb(244, 238, 229);
 }
 
 .homePage {
