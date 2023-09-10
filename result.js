@@ -4,10 +4,8 @@ const score = document.getElementById("result");
 const lastScore = JSON.parse(localStorage.getItem("lastScore"));
 
 score.innerText = `Your Score ${lastScore}!`;
-//console.log(lastScore);
 
 const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
-//console.log(highScores);
 
 username.addEventListener('keyup', ()=> {
     //console.log(username.value);
