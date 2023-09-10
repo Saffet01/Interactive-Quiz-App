@@ -52,5 +52,3 @@ saveScore = save => {
     window.location.assign("/index.html");
 
 };
-
-//submitButton.addEventListener("click", saveScore());
