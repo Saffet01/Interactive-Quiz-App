@@ -1,7 +1,7 @@
 const submitButton = document.getElementById("submit-btn");
 const username = document.getElementById("username");
 const score = document.getElementById("result");
-const lastScore = localStorage.getItem("lastScore");
+const lastScore = JSON.parse(localStorage.getItem("lastScore"));
 
 score.innerText = `Your Score ${lastScore}!`;
 //console.log(lastScore);
@@ -48,6 +48,8 @@ saveScore = save => {
     localStorage.setItem("highScores", JSON.stringify(highScores));
 
     console.log(highScores);
+
+    window.location.assign("/index.html");
 
 };
 
