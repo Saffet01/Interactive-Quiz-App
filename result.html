@@ -14,13 +14,16 @@
 
         <div class="resultPage" id="resultPage">
 
-            <h3 id="result">Score: 0</h3>
+            <h3 id="result">Your Score 0!</h3>
 
             <form>
                 <input type="text" name="username" id="username" placeholder="Type Your Name Please. ">
-                <button type="submit" class="btn" id="submit-btn" disabled>Submit</button>
+                <button type="submit" class="submit-btn-notAllowed" id="submit-btn" onclick="saveScore(event)">Submit</button>
             </form>
-        
+
+            <a href="/game.html" class="btn">Play Again</a>
+            <a href="/index.html" class="btn">Main Menu</a>
+
         </div>
 
     </div>

@@ -49,7 +49,8 @@ startGame = () => {
 getNewQuestion = () => {
 
     if(availableQuestions.length === 0 || questionCounter >= maxQuestions){
-        // go to the result page.
+        localStorage.setItem("lastScore", score);
+        // save the score and go to result page.
         return window.location.assign('/result.html');
     }
 
@@ -104,6 +105,7 @@ option.forEach( option => {
 
 incrementScore = num => {
     score += num;
+    console.log(score);
 }
 
 startGame();
